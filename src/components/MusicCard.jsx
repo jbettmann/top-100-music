@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Card, Button } from "react-bootstrap";
+import { Container, Card, Button, Col } from "react-bootstrap";
 
 export const MusicCard = ({
   music,
@@ -65,7 +65,11 @@ export const MusicCard = ({
   };
 
   return (
-    <Container className="col d-flex flex-column align-items-center music-scroll">
+    <Col
+      className="col d-flex flex-column align-items-center music-scroll"
+      xs={12}
+      md={4}
+    >
       {filteredArtist.map((art, i) => (
         <div
           onClick={(event) => handleClick(art, event)}
@@ -89,6 +93,6 @@ export const MusicCard = ({
           </Card>
         </div>
       ))}
-    </Container>
+    </Col>
   );
 };

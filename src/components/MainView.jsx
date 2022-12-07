@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import { Info } from "./Info";
 import { MusicCard } from "./MusicCard";
 
@@ -26,14 +26,17 @@ export const MainView = ({ search, setSearch }) => {
         style={{ padding: "1rem", gap: "2rem" }}
       >
         {info ? (
-          <div
+          <Col
             className="col d-flex"
+            xs={12}
+            md={8}
+            lg={{ order: "first" }}
             style={{
               flex: "1 0 0% ",
             }}
           >
             <Info info={info} setInfo={setInfo} music={music} recent={recent} />
-          </div>
+          </Col>
         ) : (
           <div></div>
         )}

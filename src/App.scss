@@ -84,18 +84,18 @@ body {
   margin: 1rem 0;
 }
 
-@media only screen and (max-width: 768px) {
-  .card {
-    max-width: 30rem;
-  }
-  .artist-container {
-    width: 100%;
-  }
-  .artist-card {
-    width: auto !important;
-    flex-direction: column;
-  }
-  .album-img {
-    width: auto;
-  }
-}
+// @media only screen and (max-width: 768px) {
+//   .card {
+//     max-width: 30rem;
+//   }
+//   .artist-container {
+//     width: 100%;
+//   }
+//   .artist-card {
+//     width: auto !important;
+//     flex-direction: column;
+//   }
+//   .album-img {
+//     width: auto;
+//   }
+// }
