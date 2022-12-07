@@ -1,0 +1,101 @@
+$background: linear-gradient(#353838, #0e0e0e);
+$cardBackground: linear-gradient(#343434, #4f4f4f);
+$secondary: #8fdfcb;
+$second: linear-gradient(#64e6d5, #62e7bf);
+
+body {
+  background: $background;
+  color: hsl(0, 0%, 100%);
+}
+.App {
+  height: 100%;
+  // max-width: 1000px;
+  width: auto;
+  background: inherit;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  color: $secondary;
+}
+
+.album-img {
+  display: flex;
+  overflow: hidden;
+  width: 300px;
+  img {
+    overflow: hidden;
+    width: auto;
+  }
+}
+.music-scroll {
+  height: 100vh;
+  overflow: scroll;
+  scroll-snap-type: none;
+}
+
+.artist-container {
+  transition: all 0.3s ease-out;
+  margin: 0.2rem 0;
+  box-shadow: 1px 1px 9px 3px #212121bf;
+}
+
+.artist-container:hover {
+  cursor: pointer;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(#8fdfcb, #316357) border-box;
+  border-radius: 10px;
+  border: 4px solid transparent;
+  transform: scale(1.05);
+  transition: all 0.7s;
+  z-index: 2;
+}
+
+.artist-card {
+  background: $cardBackground;
+  flex-direction: row;
+  text-align: right;
+  width: 20rem;
+  scroll-snap-align: start;
+}
+
+.info-card {
+  background: $cardBackground;
+  box-shadow: 1px 1px 9px 3px #212121bf;
+}
+
+.btn {
+  color: #353838;
+  border-color: $secondary;
+  background-color: $secondary;
+}
+
+.info-title {
+  margin: 1rem 0;
+  h6 {
+    margin: 0;
+  }
+  .rights {
+    font-size: 0.8rem;
+  }
+}
+
+.recent {
+  margin: 1rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    max-width: 30rem;
+  }
+  .artist-container {
+    width: 100%;
+  }
+  .artist-card {
+    width: auto !important;
+    flex-direction: column;
+  }
+  .album-img {
+    width: auto;
+  }
+}
