@@ -36,12 +36,13 @@ body {
 
 .artist-container {
   transition: all 0.3s ease-out;
-  margin: 0.2rem 0;
+  margin: 1rem 1rem;
   box-shadow: 1px 1px 9px 3px #212121bf;
 }
 
 .artist-container:hover {
   cursor: pointer;
+
   background: linear-gradient(white, white) padding-box,
     linear-gradient(#8fdfcb, #316357) border-box;
   border-radius: 10px;
