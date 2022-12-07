@@ -14,6 +14,7 @@ export const MusicCard = ({
 
   const handleInfo = (artist) => {
     setInfo(artist);
+
     if (!recent) {
       setRecent([artist["im:image"][2].label]);
     } else {
@@ -68,7 +69,7 @@ export const MusicCard = ({
     <Col
       className="col d-flex flex-column align-items-center music-scroll"
       xs={12}
-      md={4}
+      md
     >
       {filteredArtist.map((art, i) => (
         <div

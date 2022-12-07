@@ -3,10 +3,9 @@ import { Container, Card, Link } from "react-bootstrap";
 import { RecentlyViewed } from "./RecentlyViewed";
 
 export const Info = ({ info, recent, setInfo, music }) => {
-  console.log(info);
   return (
     <Container className="col">
-      <Card className="info-card" key={info.id} style={{ width: "30rem" }}>
+      <Card className="info-card" key={info.id}>
         <Card.Img variant="top" src={info["im:image"][2].label} />
 
         <Card.Body>

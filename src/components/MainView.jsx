@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Info } from "./Info";
 import { MusicCard } from "./MusicCard";
 
-export const MainView = ({ search, setSearch }) => {
+export const MainView = ({ search }) => {
   const [music, setMusic] = useState(null);
   const [info, setInfo] = useState("");
   const [recent, setRecent] = useState(null);
@@ -21,7 +21,7 @@ export const MainView = ({ search, setSearch }) => {
 
   return (
     <Container className="d-flex justify-content-evenly">
-      <div
+      <Row
         className="row d-flex justify-content-center text-align-center"
         style={{ padding: "1rem", gap: "2rem" }}
       >
@@ -29,7 +29,7 @@ export const MainView = ({ search, setSearch }) => {
           <Col
             className="col d-flex"
             xs={12}
-            md={8}
+            md={6}
             lg={{ order: "first" }}
             style={{
               flex: "1 0 0% ",
@@ -51,7 +51,7 @@ export const MainView = ({ search, setSearch }) => {
             setFavorites={setFavorites}
           />
         )}
-      </div>
+      </Row>
     </Container>
   );
 };
