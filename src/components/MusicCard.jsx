@@ -71,35 +71,29 @@ export const MusicCard = ({
       xs={12}
       md
     >
-      <div>
-        {filteredArtist.map((art, i) => (
-          <div
-            onClick={(event) => handleClick(art, event)}
-            className="artist-container"
-            style={
-              favorties.includes(art.id.attributes["im:id"]) ? { styles } : {}
-            }
-          >
-            <Card
-              className="artist-card"
-              key={art.id}
-              style={{ width: "25rem" }}
-            >
-              <div className="album-img">
-                <Card.Img variant="top" src={art["im:image"][2].label} />
-              </div>
-              <Card.Body style={{ padding: "1rem .5rem 0 0" }}>
-                <Card.Title>{art["im:name"].label}</Card.Title>
-                <Card.Text>{art["im:artist"].label}</Card.Text>
+      {filteredArtist.map((art, i) => (
+        <div
+          onClick={(event) => handleClick(art, event)}
+          className="artist-container"
+          style={
+            favorties.includes(art.id.attributes["im:id"]) ? { styles } : {}
+          }
+        >
+          <Card className="artist-card" key={art.id} style={{ width: "25rem" }}>
+            <div className="album-img">
+              <Card.Img variant="top" src={art["im:image"][2].label} />
+            </div>
+            <Card.Body style={{ padding: "1rem .5rem 0 0" }}>
+              <Card.Title>{art["im:name"].label}</Card.Title>
+              <Card.Text>{art["im:artist"].label}</Card.Text>
 
-                <Button variant="primary" onClick={() => handleInfo(art)}>
-                  Info
-                </Button>
-              </Card.Body>
-            </Card>
-          </div>
-        ))}
-      </div>
+              <Button variant="primary" onClick={() => handleInfo(art)}>
+                Info
+              </Button>
+            </Card.Body>
+          </Card>
+        </div>
+      ))}
     </Col>
   );
 };
